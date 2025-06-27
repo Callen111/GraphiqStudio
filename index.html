@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphiq Studio</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #EDEDED, #F7F1FF);
+      color: #1C1C1E;
+    }
+    header {
+      background: linear-gradient(90deg, #5555e7 0%, #0a177d 100%);
+      color: white;
+      padding: 30px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      order: -1;
+    }
+    .logo img {
+      height: 70px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .logo span {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    .hero {
+      text-align: right;
+      flex: 1;
+      max-width: 60%;
+    }
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.8rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #00F0B5;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.2rem;
+      color: #1C1C1E;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .services, .portfolio, .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    table th, table td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    table th {
+      background-color: #f2f2f2;
+      font-family: 'Sora', sans-serif;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    button {
+      background: linear-gradient(90deg, #FF5C5C, #FF8888);
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #e04646, #f07070);
+      transform: scale(1.03);
+    }
+    footer {
+      background-color: #1C1C1E;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+    .portfolio {
+      text-align: center;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Graphiq Logo">
+      <span>Graphiq Studio</span>
+    </div>
+    <div class="hero">
+      <h1>Design with Clarity & Edge</h1>
+      <p>Visual branding that speaks loud and clear</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p style="text-align: center; max-width: 720px; margin: auto;">Graphiq Studio is a modern design agency specializing in branding, social media content, print design, and digital graphics. We help brands stand out with clean, bold visuals and artistic touches.</p>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">Logos</div>
+      <div class="card">Brochures</div>
+      <div class="card">Labels</div>
+      <div class="card">Print Materials</div>
+      <div class="card">Packaging Design</div>
+      <div class="card">Flyers</div>
+      <div class="card">Business Cards</div>
+      <div class="card">Event posters</div>
+      <div class="card">Backgrounds</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">Business Cards<img src="assets/Samples/Sample1.png" alt="Project 1"></div>
+      <div class="card">Logos<img src="assets/Samples/Sample2.png" alt="Project 2"></div>
+      <div class="card">Flyers<img src="assets/Samples/Sample3.png" alt="Project 3"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pricing Sheet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+          <th>Starting Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Logos</td><td>Unique custom logo design with 1-2 initial concepts</td><td>$99</td></tr>
+        <tr><td>Brochures</td><td>Tri-fold or bi-fold layout with tailored content</td><td>$120</td></tr>
+        <tr><td>Labels</td><td>Product or packaging labels, print-ready</td><td>$75</td></tr>
+        <tr><td>Flyer</td><td>Custom Flyer. Buy 2 get 1 free deal</td><td>$65</td></tr>
+        <tr><td>Print Materials</td><td>Posters, menus, invites, or custom designs</td><td>$60</td></tr>
+        <tr><td>Packaging Design</td><td>Box or bag design, dieline-ready for printing</td><td>$150</td></tr>
+        <tr><td>Flyers</td><td>Eye-catching promotional design (1–2 pages)</td><td>$65</td></tr>
+        <tr><td>Business Cards</td><td>Front and back layout digital versions</td><td>$40</td></tr>
+        <tr><td>Event Posters</td><td>Custom poster for digital or print promotion</td><td>$85</td></tr>
+        <tr><td>Backgrounds</td><td>Branded or aesthetic backgrounds for web/social use</td><td>$50</td></tr>
+        <tr><td>Full Business Package</td><td>Comes with a logo, business card, two flyers and a Print Material service of you choice.</td><td>$50</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mkgbknlb" method="POST">
+      <label>
+        Your Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Your Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your Message:
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Graphiq Studio — All rights reserved <a href="terms.html">Terms and Conditions</a><br>When purchaseing the "Full Business Package you cannot choose another "Full Business Package" for your extra choice. You can choose a
+  </footer>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          alert("Thank you! Your message has been sent.");
+          form.reset(); // clear the form fields
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("Error sending message. Please check your connection.");
+      }
+    });
+  });
+</script>
+</html>

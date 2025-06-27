@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Package</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #F7F1FF, #EDEDED);
+      color: #1C1C1E;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      width: 100%;
+    }
+    input {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background: linear-gradient(90deg, #FF5C5C, #FF8888);
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.2s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #e04646, #f07070);
+      transform: scale(1.03);
+    }
+    .back {
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+    .back a {
+      color: #5555e7;
+      text-decoration: none;
+    }
+    .back a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const packageName = urlParams.get('package') || 'Unknown';
+      document.getElementById('package-name').textContent = packageName;
+      document.getElementById('package-input').value = packageName;
+    });
+  </script>
+</head>
+<body>
+  <h1>Book the <span id="package-name"></span> Package</h1>
+  <form action="https://formspree.io/f/mkgbknlb" method="POST">
+    <input type="hidden" name="package" id="package-input">
+    <label>
+      Your Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Your Email:
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Phone Number:
+      <input type="tel" name="phone" required />
+    </label>
+    <button type="submit">Submit Request</button>
+  </form>
+  <div class="back">
+    <a href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
